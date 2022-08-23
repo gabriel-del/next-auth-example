@@ -32,10 +32,16 @@ export const authOptions: NextAuthOptions = {
     FacebookProvider({
       clientId: process.env.FACEBOOK_ID,
       clientSecret: process.env.FACEBOOK_SECRET,
+      httpOptions: {
+        timeout: 40000,
+      },
     }),
     GithubProvider({
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET,
+      httpOptions: {
+        timeout: 40000,
+      },
     }),
     GoogleProvider({
       clientId: process.env.GOOGLE_ID,
@@ -49,6 +55,9 @@ export const authOptions: NextAuthOptions = {
       clientId: process.env.AUTH0_ID,
       clientSecret: process.env.AUTH0_SECRET,
       issuer: process.env.AUTH0_ISSUER,
+      httpOptions: {
+        timeout: 40000,
+      },
     }),
   ],
   theme: {
