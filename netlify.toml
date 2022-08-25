@@ -2,6 +2,6 @@
 [build]
 YARN_VERSION = "1.22.19"
 NETLIFY_USE_YARN = true
-environment = { NODE_VERSION = "18.7.0" }
+environment = { NODE_VERSION = "16.13.0" }
 [[plugins]]
 package = "@netlify/plugin-nextjs"
